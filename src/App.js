@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-
+import RingLoader from "react-spinners/RingLoader";
 import ChatPage from "./components/ChatPage/ChatPage";
 import LoginPage from "./components/LoginPage/LoginPage";
 import RegisterPage from "./components/RegisterPage/RegisterPage";
@@ -9,6 +9,28 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 import { useDispatch, useSelector } from "react-redux";
 
+function Loading() {
+  return (
+    <div class="contentWrap">
+      <div
+        style={{
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        <RingLoader
+          color="#5ABEF5"
+          height={15}
+          width={5}
+          radius={2}
+          margin={2}
+        />
+      </div>
+    </div>
+  );
+}
 
 function App(props) {
   const navigate = useNavigate();
@@ -36,7 +58,7 @@ function App(props) {
   }, []);
   
     if (isLoading) {
-      return <div>...loading</div>;
+      return <div><Loading/></div>;
     } else {
       return (
         

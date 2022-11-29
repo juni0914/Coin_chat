@@ -30,12 +30,14 @@ function LoginPage() {
     }
 
     return (
-        <div className="auth-wrapper">
-            <div style={{ textAlign: 'center' }}>
-                <h2 style={{fontSize: '40px',letterSpacing: '10px', color:"#C4B4E1	"}}>
-                <ImCoinDollar style={{marginBottom: "10px", marginRight: "25px"}}/>Coin Chat</h2>
-            </div>
+        <>
+        <div className="auth-wrapper" style={{
+            background: 'linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%)',
+            
+        }} >
             <form onSubmit={handleSubmit(onSubmit)}>
+            <h2 style={{fontSize: '40px',letterSpacing: '10px', color:"#C4B4E1",textAlign: 'center'}}>
+                <ImCoinDollar style={{marginBottom: "10px", marginRight: "25px"}}/>Coin Chat</h2>
                 <label>Email</label>
                 <input
                     name="email"
@@ -61,6 +63,9 @@ function LoginPage() {
                 <Link style={{ color: 'gray', textDecoration: 'none' }} to="/register">아직 아이디가 없으신가요?  </Link>
             </form>
         </div>
+        
+
+    </>
     )
 }
 

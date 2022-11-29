@@ -12,7 +12,6 @@ const CoinTable = ({ coins }: { coins: CoinsType[] }) => {
 						fontSize: '18px',
 						textAlign: 'center',
 						marginRight: '15px',
-						borderBottom: '1px solid #666',
 						whiteSpace : 'nowrap',
 						overflow : 'hidden',
 						textOverflow : 'ellipsis'

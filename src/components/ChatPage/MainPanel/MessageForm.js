@@ -175,7 +175,7 @@ const createMessage = (fileUrl = null) => {
               <button
                   onClick={handleSubmit}
                   className="message-form-button"
-                  style={{width: '100%'}}
+                  style={{width: '100%', borderRadius: "10px"}}
                   disabled={loading ? true : false}
                   >
                   SEND
@@ -185,7 +185,7 @@ const createMessage = (fileUrl = null) => {
               <button 
                   onClick={handleOpenImageRef}
                   className="message-form-button"
-                  style={{width: '100%'}}
+                  style={{width: '100%', borderRadius: "10px"}}
                   disabled={loading ? true : false}
                   >
                   Image UPLOAD

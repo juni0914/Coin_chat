@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import {IoMdRefresh} from 'react-icons/io'
 import { ImCoinDollar } from 'react-icons/im';
 import CoinTable from './CoinTable.tsx';
+import moment from 'moment';
+import 'moment/locale/ko';
+
 
 
 
@@ -10,6 +13,7 @@ export interface CoinsType {
 	rank: number
 	name: string
 	symbol: string
+	last_updated: string
 	quotes: { 
 		KRW: { 
 			price: number
@@ -30,6 +34,10 @@ function MainApp(): JSX.Element {
 
 	const refreshPage = ()=>{
 		window.location.reload();
+	}
+
+	const time = {
+		timestamp: moment().format('YYYY.MM.DD (dd)  HH시 mm분 ss초')
 	}
 	
 	useEffect(() => {
@@ -66,9 +74,13 @@ function MainApp(): JSX.Element {
 							marginLeft: '15px',
 							cursor:'pointer'
 						}}>🔄</button></h1>
-					<div className="btn">
-						
-					</div>
+
+					<p style={{
+						float: "right",
+						marginRight: "10px",
+						borderBottom: '1px solid #666',
+						borderTop: '1px solid #666'}}>마지막 갱신시간 : {time.timestamp}</p>
+					ㅤT = Trillion(1조)
 				</div>
 				<div className="result">
 				{
