@@ -52,13 +52,14 @@ function RegisterPage() {
 
 
   return (
-    <div className="auth-wrapper">
+    <div className="auth-wrapper" style={{
+      background: 'linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%)',
+      
+  }}>
 
-      <div style={{textAlign: 'center'}}>
-        <h2 style={{fontSize: '40px',letterSpacing: '10px', color:"#C4B4E1"}}>회원가입</h2>
-      </div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
+      <h2 style={{fontSize: '40px',letterSpacing: '10px', color:"#C4B4E1",textAlign: 'center'}}>회원가입</h2>
           <label>Email</label>
            <input
               name="email"

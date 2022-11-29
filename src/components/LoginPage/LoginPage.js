@@ -32,7 +32,8 @@ function LoginPage() {
     return (
         <>
         <div className="auth-wrapper" style={{
-            background: 'linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%)',
+      background: 'linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%)'
+
             
         }} >
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -61,9 +62,11 @@ function LoginPage() {
 
                 <input type="submit" value="로그인" disabled={loading} />
                 <Link style={{ color: 'gray', textDecoration: 'none' }} to="/register">아직 아이디가 없으신가요?  </Link>
+                
             </form>
+
         </div>
-        
+
 
     </>
     )
