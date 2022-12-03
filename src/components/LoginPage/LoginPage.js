@@ -57,10 +57,10 @@ function LoginPage() {
                 {errors.password && errors.password.type === "minLength" && <p>비밀번호는 최소 6자 이상입니다.</p>}
 
                 {errorFromSubmit &&
-                    <p>{errorFromSubmit}</p>
+                    <p>비밀번호가 일치하지 않습니다.</p>
                 }
 
-                <input type="submit" value="로그인" disabled={loading} />
+                <input type="submit" value="Sign up" disabled={loading} />
                 <Link style={{ color: 'gray', textDecoration: 'none' }} to="/register">아직 아이디가 없으신가요?  </Link>
                 
             </form>

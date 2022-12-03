@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import RingLoader from "react-spinners/RingLoader";
+import RotateLoader
+from "react-spinners/RotateLoader";
 import ChatPage from "./components/ChatPage/ChatPage";
 import LoginPage from "./components/LoginPage/LoginPage";
 import RegisterPage from "./components/RegisterPage/RegisterPage";
@@ -11,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 function Loading() {
   return (
-    <div class="contentWrap">
+    <div className="contentWrap">
       <div
         style={{
           position: "fixed",
@@ -20,7 +21,7 @@ function Loading() {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <RingLoader
+        <RotateLoader
           color="#5ABEF5"
           height={15}
           width={5}

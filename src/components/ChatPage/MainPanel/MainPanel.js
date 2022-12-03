@@ -9,6 +9,8 @@ import { setUserPosts } from '../../../redux/actions/chatRoom_action';
 // import Skeleton from '../../../commons/components/Skeleton';
 import { getDatabase, ref, onChildAdded, onChildRemoved, child, off } from "firebase/database";
 
+
+
 export class MainPanel extends Component {
 
     messageEndRef = React.createRef();

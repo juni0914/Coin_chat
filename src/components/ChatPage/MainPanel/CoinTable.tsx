@@ -29,9 +29,7 @@ const CoinTable = ({ coins }: { coins: CoinsType[] }) => {
 				<tbody style={{textAlign: 'left'}}>
 					{coins.map((coin: CoinsType) => (
 						<tr key={coin.id}>
-							<td className="headCol rankCol align-right" style={{textAlign: 'center'}}>
-								{coin.rank}
-							</td>
+							<td className="headCol rankCol align-right" style={{textAlign: 'center'}}>{coin.rank}</td>
 							<td className="headCol nameCol" >{coin.name}</td>
 							<td style={{textAlign: 'center'}}>{coin.symbol}</td>
 							<td className="align-right" style={{textAlign: 'left'}} >
@@ -44,13 +42,13 @@ const CoinTable = ({ coins }: { coins: CoinsType[] }) => {
 								{(
 									coin.quotes.KRW.market_cap / 1000000000000
 								).toFixed(2)}
-								T
+								조
 							</td>
 							<td className="align-right" style={{textAlign: 'right'}}>
 								{(
 									coin.quotes.KRW.volume_24h / 1000000000000
 								).toFixed(2)}
-								T
+								조
 							</td>
 							<td className="align-right" style={{
 								textAlign: 'right',

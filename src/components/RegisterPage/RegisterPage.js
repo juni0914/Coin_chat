@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import md5 from 'md5';
-// import firebase from '../../firebase';
+import { ImCoinDollar } from 'react-icons/im';
 import { getDatabase, ref, set } from "firebase/database";
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
@@ -59,7 +59,8 @@ function RegisterPage() {
 
 
       <form onSubmit={handleSubmit(onSubmit)}>
-      <h2 style={{fontSize: '40px',letterSpacing: '10px', color:"#C4B4E1",textAlign: 'center'}}>회원가입</h2>
+      <h2 style={{fontSize: '40px',letterSpacing: '10px', color:"#C4B4E1",textAlign: 'center'}}>
+                <ImCoinDollar style={{marginBottom: "10px", marginRight: "25px"}}/>Coin Chat</h2>
           <label>Email</label>
            <input
               name="email"
@@ -103,7 +104,7 @@ function RegisterPage() {
                     <p>{errorFromSubmit}</p>
                 }
 
-        <input type="submit" value="회원가입" disabled={loading}/>
+        <input type="submit" value="Sign Up" disabled={loading}/>
         <Link style={{color: 'gray', textDecoration: 'none'}} to="/login" >이미 아이디가 있으신가요?</Link>
       </form>
 

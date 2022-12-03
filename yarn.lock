@@ -8371,6 +8371,11 @@
   "resolved" "https://registry.npmjs.org/progress/-/progress-2.0.3.tgz"
   "version" "2.0.3"
 
+"promise-timers@^1.0.1":
+  "integrity" "sha512-mtWXC7y15cmp4lPKpJHpmv8t9cbcXWZU8dAVEvvkrznAqNM2Mbn02rzG0ayoE3OmgKpQVmUKTJ43ZQfzpp0oYw=="
+  "resolved" "https://registry.npmjs.org/promise-timers/-/promise-timers-1.0.1.tgz"
+  "version" "1.0.1"
+
 "promise@^8.1.0":
   "integrity" "sha512-+CMAlLHqwRYwBMXKCP+o8ns7DN+xHDUiI+0nArsiJ9y+kJVPLFxEaSw6Ha9s9H0tftxg2Yzl25wqj9G7m5wLZg=="
   "resolved" "https://registry.npmjs.org/promise/-/promise-8.2.0.tgz"
