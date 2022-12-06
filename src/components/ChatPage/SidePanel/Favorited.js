@@ -6,7 +6,7 @@ import {
     setPrivateChatRoom
 } from '../../../redux/actions/chatRoom_action';
 
-import { child, getDatabase, ref, onChildAdded, onChildRemoved, off } from "firebase/database";
+import { child, getDatabase, ref, onChildAdded, onChildRemoved, off, onChildChanged} from "firebase/database";
 
 export class Favorited extends Component {
 
@@ -39,13 +39,13 @@ export class Favorited extends Component {
         onChildAdded(child(userRef, `${userId}/favorited`), DataSnapshot => {
             const favoritedChatRoom = { 
                 id: DataSnapshot.key, 
-                ...DataSnapshot.val(),
+                ...DataSnapshot.val()
             };
             this.setState({
                 favoritedChatRooms: [
                     ...this.state.favoritedChatRooms, // 이 부분 확인하기. deep copy , 새 배열을 만들어서 넣어주고 그걸 부르기
-                    favoritedChatRoom,
-                ],  // 디비 저장방식문제일수도 있음 확인하자
+                    favoritedChatRoom
+                ]  // 디비 저장방식문제일수도 있음 확인하자
                 
             });
         });
@@ -69,8 +69,6 @@ export class Favorited extends Component {
         this.props.dispatch(setCurrentChatRoom(room));
         this.props.dispatch(setPrivateChatRoom(false));
         this.setState({ activeChatRoomId: room.id });
-        
-        
 
     }
 
@@ -100,7 +98,7 @@ export class Favorited extends Component {
                 </span>
                 <ul style={{ listStyleType: 'none', padding: '0' }}>
                     {this.renderFavoritedChatRooms(favoritedChatRooms)}
-
+                {console.log(favoritedChatRooms)}
                 </ul>
 
             </div>

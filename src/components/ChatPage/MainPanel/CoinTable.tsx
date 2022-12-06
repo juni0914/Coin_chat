@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CoinsType } from './MainApp';
 
 const CoinTable = ({ coins }: { coins: CoinsType[] }) => {
 	return (
-		<div className="coin-table" >
-			<table className="table  table-hover table-striped" >
+		<div className="coin-table">
+			<table className="table  table-hover table-striped table-borderless" >
 				<thead>
 					<tr style={{
 						padding: '1rem',
