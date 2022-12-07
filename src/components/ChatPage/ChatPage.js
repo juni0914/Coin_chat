@@ -20,7 +20,7 @@ function ChatPage() {
                     key={currentChatRoom && currentChatRoom.id}
                 />
               </div>
-              <div style={{ width: '250vw' }}>
+              <div style={{ width: '150vw' }}>
                 <Secondpage
                 />
               </div>

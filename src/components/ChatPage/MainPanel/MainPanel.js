@@ -196,7 +196,7 @@ export class MainPanel extends Component {
                 <MessageHeader handleSearchChange={this.handleSearchChange} />
 
                 <div style={{
-                    width: '100%',
+                    width: "67vh",
                     height: '450px',
                     border: '.2rem solid #ececec',
                     borderRadius: '20px',
