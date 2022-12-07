@@ -60,7 +60,7 @@ function LoginPage() {
                     <p>비밀번호가 일치하지 않습니다.</p>
                 }
 
-                <input type="submit" value="Sign up" disabled={loading} />
+                <input type="submit" value="Sign In" disabled={loading} />
                 <Link style={{ color: 'gray', textDecoration: 'none' }} to="/register">아직 아이디가 없으신가요?  </Link>
                 
             </form>

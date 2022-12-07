@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useCallback} from 'react'
+import React,{useState,useEffect} from 'react'
 import { useSelector } from 'react-redux';
 import  Container  from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -131,18 +131,18 @@ const addFavoriteListener = (chatRoomId, userId) => {
             </InputGroup>
           {/* </Col> */}
       </Row>
-        {!isPrivateChatRoom &&
+        
           <div style={{display: 'flex',  justifyContent: 'flex-end'}}>
 
               <p style={{marginRight:'20px'}}>
               <TbCrown/>  ㅤ
               <Image src={chatRoom && chatRoom.createdBy.image}
-                                  roundedCircle style={{ width: '35px', height: '35px' }}
+                                  roundedCircle style={{ width: '40px', height: '40px', marginRight:"5px" }}
                 /> {" "} {chatRoom && chatRoom.createdBy.name}
               </p>
               
           </div>
-        }
+        
         <Row>
         <Col>
           <Accordion>

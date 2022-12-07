@@ -1,8 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+
 import { CoinsType } from './MainApp';
 
+
+
 const CoinTable = ({ coins }: { coins: CoinsType[] }) => {
+
+
+	const [modal, setModal] = useState(false);
+
+
 	return (
 		<div className="coin-table">
 			<table className="table  table-hover table-striped table-borderless" >
@@ -29,7 +36,7 @@ const CoinTable = ({ coins }: { coins: CoinsType[] }) => {
 				</thead>
 				<tbody style={{textAlign: 'left'}}>
 					{coins.map((coin: CoinsType) => (
-						<tr key={coin.id}>
+						<tr key={coin.id} onClick={() => setModal(true)}>
 							<td className="headCol rankCol align-right" style={{textAlign: 'center'}}>{coin.rank}</td>
 							<td className="headCol nameCol" >{coin.name}</td>
 							<td style={{textAlign: 'center'}}>{coin.symbol}</td>
@@ -65,6 +72,7 @@ const CoinTable = ({ coins }: { coins: CoinsType[] }) => {
 					))}
 				</tbody>
 			</table>
+			
 		</div>
 	);
 }

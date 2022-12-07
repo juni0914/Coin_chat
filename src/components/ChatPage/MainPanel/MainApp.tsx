@@ -9,7 +9,6 @@ import 'moment/locale/ko';
 
 
 
-
 export interface CoinsType {
 	id: string
 	rank: number
@@ -37,10 +36,13 @@ function MainApp(): JSX.Element {
 		window.location.reload();
 	};
 
+	
+
 	const time = {
 		timestamp: moment().format('YYYY.MM.DD (dd)  HH시 mm분 ss초')
 	};
 
+	
 	useEffect(() => {
 		setInterval (()=>
 
@@ -49,12 +51,7 @@ function MainApp(): JSX.Element {
 			.then(json => {
 				setCoins(json.slice(0, 100));
 				setLoading(false);
-				// console.log(json);
-				// setInterval(()=>{ setCoins(json.slice(0, 100)) }, 10000);	
-				// {setLoading(true)}
-				// setInterval(()=>{ console.log(json) }, 5000);	
 			})
-
 			.catch((error) => {
 				console.log(error);
 				// 에러 넘버를 확인
