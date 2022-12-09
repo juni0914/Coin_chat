@@ -98,7 +98,7 @@ export class Favorited extends Component {
                 </span>
                 <ul style={{ listStyleType: 'none', padding: '0' }}>
                     {this.renderFavoritedChatRooms(favoritedChatRooms)}
-                {console.log(favoritedChatRooms)}
+                {/* {console.log(favoritedChatRooms)} */}
                 </ul>
 
             </div>

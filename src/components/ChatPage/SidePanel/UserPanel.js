@@ -34,6 +34,8 @@ function UserPanel() {
     const metadata = { contentType: file.type };
     const storage = getStorage();
 
+    // console.log('file',file)
+
     try {
       //스토리지에 파일 저장하기 
       let uploadTask = uploadBytesResumable(strRef(storage, `user_image/${user.uid}`), file, metadata)
