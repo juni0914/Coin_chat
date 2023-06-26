@@ -1,3 +1,7 @@
+<div align=center>
+	<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Juni%20Github!&fontSize=90" />	
+</div>
+
 실시간 거래량 TOP 100의 비트코인 시세와 각종 정보들과
 실시간 채팅을 접목한 리액트를 활용한 웹앱.
 # https://react-chatapp-ed63e.web.app/
